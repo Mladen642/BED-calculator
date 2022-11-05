@@ -1,18 +1,27 @@
 def BED(n, d, alfabeta):
 
-    # racun
+    # Calc
     BED = round(float(n * d * (1 + (d / (alfabeta)))), 2)
 
-    print(f"Ukupan BED iznosi {BED} Gy!")
+    print("###############################")
+    print(f"Total BED equals to {BED} Gy!")
+    print("###############################")
 
 
 if __name__ == "__main__":
-    # broj frakcija
-    n = int(input("Broj frakcija: "))
+    while True:
+        try:
+            # num of fractions
+            n = int(input("Number of fractions (n): "))
 
-    # doza po frakciji
-    d = float(input("Doza po frakciji: "))
+            # fraction
+            d = float(input("Dose fraction (d): "))
 
-    alfabeta = int(input("alfa/beta: "))
+            # ratio
+            alfabeta = int(input("Alfa/beta: "))
+            print()
 
-    BED(n, d, alfabeta)
+            BED(n, d, alfabeta)
+            break
+        except:
+            print("Please enter right format of the variables!")
